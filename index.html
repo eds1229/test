@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        #clickButton {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="clickButton">Click Me!</button>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById('counter');
+        const clickButton = document.getElementById('clickButton');
+
+        clickButton.addEventListener('click', () => {
+            count++;
+            counterElement.textContent = count;
+        });
+    </script>
+</body>
+</html>
